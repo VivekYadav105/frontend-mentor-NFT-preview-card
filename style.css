@@ -1,0 +1,114 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serief;
+    margin:0px;
+    padding:0px;
+    font-size: 18px;
+}
+body{
+    background-color: var(--main-BG);
+    color:white;
+    display: grid;
+    width: 100vw;
+    height:100vh;
+    padding: 20px;
+}
+.card{
+    background-color: var(--card-BG);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    min-width:300px;
+    max-width:360px;
+    max-height:650;
+    min-height:600;
+    padding:25px;
+}
+h1,p{   
+    display: inline-block;
+}
+h1{
+    font-weight:600;
+    font-size: 24px;
+}
+p{
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--Soft-blue);
+}
+.title,.info,.time,.creator{
+    width:100%;
+    margin-top: 1em;
+}
+.image img{
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+    font-size: 0px;
+}
+.image:hover{
+    background-image: url("images/icon-view.svg");
+    background-color: cyan;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius:15px;
+    overflow: hidden;
+}
+#main-pic:hover{
+    opacity: 0.5;
+}
+.creator,.time,.image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.final-text>span,.final-text>p{
+    font-size: 16px;
+}
+.final-text{
+    flex-grow: 1.5;
+    text-align: center;
+}
+.creator-image>img{
+    height:50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.creator{
+    border-top: 1px solid var(--line);
+    padding: 1em 0px 0px 0px;
+}
+.left>p{
+    color:cyan;
+    font-weight: 700;
+
+}
+.right{
+    color:var(--Soft-blue);
+    font-weight: 300;
+}
+span{
+    font-weight: 700;
+}
+span:hover,h1:hover{
+    color: cyan;
+}
+span:hover,.image:hover,h1:hover{
+    cursor: pointer;
+}
+@media (max-width:400px) {
+        body{
+            width:500px;
+            height:600px;
+        }
+}
